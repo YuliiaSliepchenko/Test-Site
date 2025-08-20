@@ -1,0 +1,519 @@
+<!--
+  index.html
+  Односторінковий лендинг performance marketing агенції.
+  Стек: чисті HTML/CSS/JS. Для зображень використано безпечні плейсхолдери sider.ai/autoimage.
+  Включає: Header, Hero, Partners, Services, Channels+Stats, Social, Cases, Process, Contact, Footer.
+-->
+
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>LUDI.DIGITAL — Performance Marketing</title>
+    <meta
+      name="description"
+      content="Performance marketing: таргетована, контекстна, медійна реклама, SMM, Influencer, TikTok. Кейси, етапи роботи, контакти."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- SVG sprite: невеликі іконки для повторного використання -->
+    <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13.172 12L8.222 7.05l1.414-1.414L16 12l-6.364 6.364-1.414-1.414L13.172 12Z"></path>
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9 16.17l-3.88-3.88L3.7 13.7 9 19l12-12-1.41-1.41z"></path>
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h10v-2.5C11 14.17 6.33 13 4 13zm12 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h5v-2.5C22 14.17 17.33 13 14 13z"></path>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"></path>
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C11.85 21 3 12.15 3 1c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z"></path>
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.29 6.71a1 1 0 011.42 0L16 12l-5.29 5.29a1 1 0 11-1.42-1.42L13.17 12 9.29 8.12a1 1 0 010-1.41Z"></path>
+      </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="#">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <span class="brand__name">LUDI.DIGITAL</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#services" class="nav__link">Послуги</a>
+          <a href="#channels" class="nav__link">Канали</a>
+          <a href="#cases" class="nav__link">Кейси</a>
+          <a href="#process" class="nav__link">Етапи</a>
+          <a href="#contact" class="nav__link">Контакти</a>
+        </nav>
+
+        <a href="#contact" class="btn btn--primary">
+          Почати проєкт
+          <svg class="icon"><use href="#icon-arrow-right" /></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="badge">
+            Performance Marketing
+            <span class="badge__ok">
+              <svg class="icon icon--xs"><use href="#icon-check" /></svg>
+              trusted
+            </span>
+          </div>
+          <h1 id="hero-title" class="hero__title">
+            Розвиваємо продажі через аналітику, креативи та масштабування
+          </h1>
+          <p class="hero__subtitle">
+            Таргетована, контекстна та медійна реклама. SMM, Influencer та TikTok — усе, що потрібно для зростання у 2025.
+          </p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--accent">
+              Запустити рекламу
+              <svg class="icon"><use href="#icon-arrow-right" /></svg>
+            </a>
+            <a href="#cases" class="btn btn--ghost">
+              Подивитись кейси
+              <svg class="icon"><use href="#icon-chevron" /></svg>
+            </a>
+          </div>
+
+          <div class="hero__partners">
+            <div class="chip">
+              <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/0b918c76-2c73-4337-b23c-4ae8ea361698.jpg" alt="Meta Business Partner" class="chip__img" />
+              Meta Business Partner
+            </div>
+            <div class="chip">
+              <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/db68d300-c98c-42b5-8f12-7a1fc99d2533.jpg" alt="Google Partner" class="chip__img" />
+              Google Partner
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__glow"></div>
+          <div class="media-card">
+            <img
+              src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/96785dc6-ab89-4a59-81ce-b33a61b86897.jpg"
+              class="media-card__img"
+              alt="Marketing analytics"
+            />
+          </div>
+          <div class="hero__thumbs">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/e44b80c6-b671-49a4-a4ba-d54f960d4b9e.jpg" alt="Dashboard" class="thumb" />
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/bcf91ac9-9074-440c-87ec-0109dbebc1b8.jpg" alt="Creative ads" class="thumb" />
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/2dcbd624-1037-4b16-bc81-1d41ff6697d4.jpg" alt="Team work" class="thumb" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="section section--strip" aria-label="Партнери">
+      <div class="container strip">
+        <div class="strip__item">
+          <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/54bbd744-f60b-4d37-ae41-cd0f9d224d14.jpg" class="strip__logo" alt="DAN.IT" />
+          <span class="strip__name">DAN.IT</span>
+        </div>
+        <div class="strip__item">
+          <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/06b4b6f5-8cf9-46a8-bedc-7edd174421d1.jpg" class="strip__logo" alt="FARFI" />
+          <span class="strip__name">FARFI</span>
+        </div>
+        <div class="strip__item">
+          <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/b24f9ebf-b305-4352-8aba-02aa6e5c77f2.jpg" class="strip__logo" alt="FOODZ" />
+          <span class="strip__name">FOODZ</span>
+        </div>
+        <div class="strip__item">
+          <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/79480a85-629a-4b5f-8a91-8dd269cf8813.jpg" class="strip__logo" alt="GELIUS" />
+          <span class="strip__name">GELIUS</span>
+        </div>
+        <div class="strip__item">
+          <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/d537e73a-0552-4fb3-82fb-0403405cc042.jpg" class="strip__logo" alt="EDUCATION PLEASE" />
+          <span class="strip__name">EDUCATION PLEASE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="services-title" class="section__title">Послуги та ніші</h2>
+          <p class="section__subtitle">
+            Працюємо зі стартапами і enterprise — тестуємо гіпотези, масштабування при product‑market fit.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="card__icon">📈</div>
+            <h3 class="card__title">E‑commerce</h3>
+            <p class="card__text">Магазини, каталоги, мульти‑geo</p>
+            <div class="link">Дізнатись більше <svg class="icon"><use href="#icon-chevron" /></svg></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">📱</div>
+            <h3 class="card__title">Mobile App</h3>
+            <p class="card__text">Залучення користувачів, ROAS</p>
+            <div class="link">Дізнатись більше <svg class="icon"><use href="#icon-chevron" /></svg></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">🎓</div>
+            <h3 class="card__title">Education</h3>
+            <p class="card__text">Ліди на курси й марафони</p>
+            <div class="link">Дізнатись більше <svg class="icon"><use href="#icon-chevron" /></svg></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">🏢</div>
+            <h3 class="card__title">B2B</h3>
+            <p class="card__text">Попит і генерація лідів</p>
+            <div class="link">Дізнатись більше <svg class="icon"><use href="#icon-chevron" /></svg></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">🎟️</div>
+            <h3 class="card__title">Delivery &amp; Events</h3>
+            <p class="card__text">Онлайн‑продажі та квитки</p>
+            <div class="link">Дізнатись більше <svg class="icon"><use href="#icon-chevron" /></svg></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">📣</div>
+            <h3 class="card__title">Media &amp; Influencers</h3>
+            <p class="card__text">Охоплення та довіра</p>
+            <div class="link">Дізнатись більше <svg class="icon"><use href="#icon-chevron" /></svg></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Channels + Stats -->
+    <section id="channels" class="section section--muted" aria-labelledby="channels-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="channels-title" class="section__title">Канали просування</h2>
+          <p class="section__subtitle">
+            Підбираємо мікс каналів під цілі бізнесу і поточний етап зростання.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <div class="panel">
+            <div class="panel__row">
+              <svg class="icon icon--ok"><use href="#icon-check" /></svg>
+              <div>
+                <h3 class="panel__title">Таргетована реклама</h3>
+                <p class="panel__text">Facebook, Instagram, TikTok. Воронка, аудиторії, креативи.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel__row">
+              <svg class="icon icon--ok"><use href="#icon-check" /></svg>
+              <div>
+                <h3 class="panel__title">Контекстна реклама</h3>
+                <p class="panel__text">Google Search/Shopping/YouTube. Намірність і масштабування.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel__row">
+              <svg class="icon icon--ok"><use href="#icon-check" /></svg>
+              <div>
+                <h3 class="panel__title">Медійна реклама</h3>
+                <p class="panel__text">Охоплення, частота, брендинг. CPM/CPV, частотні обмеження.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid--3 stats">
+          <div class="stat">
+            <div class="stat__icon">
+              <svg class="icon"><use href="#icon-users" /></svg>
+            </div>
+            <div>
+              <div class="stat__value">13+</div>
+              <div class="stat__label">активних кейсів/місяць</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">
+              <svg class="icon"><use href="#icon-users" /></svg>
+            </div>
+            <div>
+              <div class="stat__value">$0.3M</div>
+              <div class="stat__label">керований бюджет за 2024</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">
+              <svg class="icon"><use href="#icon-users" /></svg>
+            </div>
+            <div>
+              <div class="stat__value">9325+</div>
+              <div class="stat__label">лідів з рекламних кампаній</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <section class="section" aria-labelledby="social-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="social-title" class="section__title">Соцмережі, інфлюенс і TikTok</h2>
+          <p class="section__subtitle">Підвищуємо довіру до бренду та залучаємо нову органічну аудиторію.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="case">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/b52cd5d9-f5dd-48ac-b344-a80d56d401e0.jpg" alt="SMM" class="case__img" />
+            <div class="case__body">
+              <h3 class="case__title">SMM</h3>
+              <p class="case__text">Контент‑стратегія, креативи, ком'юніті — для органіки й довіри.</p>
+              <div class="link">Обговорити проєкт <svg class="icon"><use href="#icon-chevron" /></svg></div>
+            </div>
+          </article>
+          <article class="case">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/0b9fcb8f-6638-4241-b9c5-19a6170c193f.jpg" alt="Influencer Marketing" class="case__img" />
+            <div class="case__body">
+              <h3 class="case__title">Influencer Marketing</h3>
+              <p class="case__text">Підбір блогерів, UGC, інтеграції, що впливають на продажі.</p>
+              <div class="link">Обговорити проєкт <svg class="icon"><use href="#icon-chevron" /></svg></div>
+            </div>
+          </article>
+          <article class="case">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/f42afd64-95cf-4042-9d32-da806cf46eb2.jpg" alt="TikTok" class="case__img" />
+            <div class="case__body">
+              <h3 class="case__title">TikTok</h3>
+              <p class="case__text">Короткі відео, Spark Ads, робота з трендами та частотою.</p>
+              <div class="link">Обговорити проєкт <svg class="icon"><use href="#icon-chevron" /></svg></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" class="section section--muted" aria-labelledby="cases-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="cases-title" class="section__title">Кейси</h2>
+          <p class="section__subtitle">Релевантний досвід і підхід, який переносимо на ваш бізнес.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="case case--card">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/38dd0d2e-73b2-4b0c-b624-28fad0414f29.jpg" alt="GELIUS" class="case__img" />
+            <div class="case__body">
+              <div class="tags">
+                <span class="tag">E‑commerce</span>
+                <span class="tag">Meta Ads</span>
+                <span class="tag">Remarketing</span>
+              </div>
+              <h3 class="case__title">GELIUS — відновлення продажів</h3>
+              <p class="case__note">x1.6 продажів завдяки креативам і ремаркетингу</p>
+              <div class="link link--muted">Деталі кейсу <svg class="icon"><use href="#icon-chevron" /></svg></div>
+            </div>
+          </article>
+
+          <article class="case case--card">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/641a895d-7d4b-4dbf-9e5f-ed67dedbc13d.jpg" alt="DAN.IT" class="case__img" />
+            <div class="case__body">
+              <div class="tags">
+                <span class="tag">Education</span>
+                <span class="tag">Google Ads</span>
+                <span class="tag">YouTube</span>
+              </div>
+              <h3 class="case__title">DAN.IT — потік лідів на курси</h3>
+              <p class="case__note">-32% CPL після реструктуризації кампаній</p>
+              <div class="link link--muted">Деталі кейсу <svg class="icon"><use href="#icon-chevron" /></svg></div>
+            </div>
+          </article>
+
+          <article class="case case--card">
+            <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/9b68330a-bb87-4b56-b175-1c4b9c160960.jpg" alt="FOODZ" class="case__img" />
+            <div class="case__body">
+              <div class="tags">
+                <span class="tag">Delivery</span>
+                <span class="tag">CRM</span>
+                <span class="tag">Retention</span>
+              </div>
+              <h3 class="case__title">FOODZ — повернення покупців</h3>
+              <p class="case__note">LTV+ за рахунок повторних покупок і CRM</p>
+              <div class="link link--muted">Деталі кейсу <svg class="icon"><use href="#icon-chevron" /></svg></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="process-title" class="section__title">Етапи роботи</h2>
+          <p class="section__subtitle">Прозорий процес зі звітністю та контрольними точками.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <div class="step">
+            <div class="step__head">
+              <span class="step__num">1</span>
+              <h3 class="step__title">Організаційний блок</h3>
+            </div>
+            <ul class="step__list">
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Підписуємо договір</li>
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Створюємо бриф</li>
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Отримуємо доступи</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="step__head">
+              <span class="step__num">2</span>
+              <h3 class="step__title">Підготовка до запуску</h3>
+            </div>
+            <ul class="step__list">
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Стратегія і план тестів</li>
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Налаштування аналітики</li>
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Виробництво креативів</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <div class="step__head">
+              <span class="step__num">3</span>
+              <h3 class="step__title">Запуск і масштабування</h3>
+            </div>
+            <ul class="step__list">
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Старт кампаній</li>
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Аналіз перших результатів</li>
+              <li><svg class="icon icon--ok"><use href="#icon-check" /></svg> Масштабування зв'язок</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--muted" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <header class="section__head">
+          <h2 id="contact-title" class="section__title">Зв'яжіться з нами</h2>
+          <p class="section__subtitle">Напишіть кілька деталей — повернемось із пропозицією.</p>
+        </header>
+
+        <div class="contact__cols">
+          <div class="form card card--solid">
+            <form id="lead-form" class="form__grid" novalidate>
+              <div class="form__field">
+                <label class="form__label">Ім'я</label>
+                <input name="name" placeholder="Ваше ім'я" class="input" required />
+              </div>
+              <div class="form__field">
+                <label class="form__label">Телефон</label>
+                <input name="phone" placeholder="+380 XX XXX XX XX" class="input" required />
+              </div>
+              <div class="form__field form__field--full">
+                <label class="form__label">Коротко про проєкт</label>
+                <textarea name="project" rows="4" placeholder="Ніша, ціль, бюджет" class="textarea"></textarea>
+              </div>
+              <button id="lead-submit" class="btn btn--accent" type="submit">
+                Відправити заявку
+                <svg class="icon"><use href="#icon-arrow-right" /></svg>
+              </button>
+            </form>
+          </div>
+
+          <aside class="card card--solid">
+            <h3 class="card__title">Контакти</h3>
+            <p class="card__text">Працюємо офлайн/онлайн. Зустрічі — за домовленістю.</p>
+
+            <div class="contacts">
+              <a href="mailto:info@ludi.digital" class="contact">
+                <svg class="icon icon--ok"><use href="#icon-mail" /></svg>
+                info@ludi.digital
+              </a>
+              <a href="tel:+380000000000" class="contact">
+                <svg class="icon icon--ok"><use href="#icon-phone" /></svg>
+                +38 (000) 000 00 00
+              </a>
+            </div>
+
+            <div class="gallery">
+              <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/21f14213-2683-4f97-9a96-88c1899db7c3.jpg" alt="Office" class="thumb" />
+              <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/13bfed5b-a4f9-4c12-a7d0-cdd7d7d47a78.jpg" alt="Team" class="thumb" />
+              <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/b9de42fe-f5da-4253-92dd-08f2f6a39ff1.jpg" alt="Workspace" class="thumb" />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="brand__logo" aria-hidden="true"></span>
+          <div>
+            <div class="brand__name">LUDI.DIGITAL</div>
+            <div class="footer__note">Performance Marketing Agency</div>
+          </div>
+        </div>
+        <div class="footer__copy">
+          © <span id="year"></span> LUDI.DIGITAL. Усі права захищено.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Minimal JS: плавний скрол (через CSS), логіка форми та рік у футері -->
+    <script>
+      /** Просте керування станом відправки форми */
+      (function () {
+        const form = document.getElementById('lead-form');
+        const submit = document.getElementById('lead-submit');
+        const year = document.getElementById('year');
+
+        year.textContent = new Date().getFullYear();
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const fd = new FormData(form);
+          const name = String(fd.get('name') || '').trim();
+          const phone = String(fd.get('phone') || '').trim();
+
+          if (!name || !phone) {
+            alert("Заповніть ім'я та телефон, будь ласка.");
+            return;
+          }
+
+          submit.disabled = true;
+          submit.textContent = 'Відправка...';
+
+          // Імітація запиту
+          setTimeout(function () {
+            submit.textContent = 'Надіслано ✓';
+          }, 900);
+        });
+      })();
+    </script>
+  </body>
+</html>
