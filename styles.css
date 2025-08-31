@@ -225,6 +225,7 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .media-card__img { object-fit: cover; }
 .hero__thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
