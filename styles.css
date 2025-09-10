@@ -140,6 +140,24 @@ img { max-width: 100%; display: block; }
 }
 .btn--ghost:hover { background: var(--bg-muted); }
 
+.lang-button {
+  background: orange;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-button:hover {
+  background: darkorange;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -210,6 +228,9 @@ img { max-width: 100%; display: block; }
   padding: 8px 10px; border-radius: 10px;
   background: var(--panel); border: 1px solid var(--border);
   color: var(--muted); font-size: 13px;
+}
+.highlight {
+  font-weight: bold;
 }
 .language-selector {
   position: relative;
