@@ -175,6 +175,13 @@ img { max-width: 100%; display: block; }
   padding-block: 48px;
 }
 .hero__content { padding-top: 35px; }
+.biography__content { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 35px; }
 .section__service {
     display: flex;
     flex-direction: column;
@@ -217,7 +224,7 @@ img { max-width: 100%; display: block; }
   margin: 12px;
   font-size: 20px;;
   color: #070b14;
-  display: flex;
+
   justify-content: flex-start;
 }
 .hero__subtitle { color: var(--bg); margin-top: 12px; display: flex; justify-content: center; align-items: center;}
@@ -315,6 +322,13 @@ img { max-width: 100%; display: block; }
 }
 .media-card__img { object-fit: cover; }
 .hero__thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.messenger {
+  font-weight: 700;
+  font-size: 20px;;
+  color: #070b14;
+  display: flex;
+  justify-content: flex-start;
+}
 .thumb {
   height: 92px; width: 100%; object-fit: cover;
   border-radius: 10px; border: 1px solid var(--border);
@@ -497,3 +511,47 @@ background: white;}
 @media (min-width: 1024px) {
   .grid--3 { grid-template-columns: repeat(3, 1fr); }
 }
+.slider {
+  position: relative;
+  width: 800px;  /* ширина слайдера */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  border-bottom: 2px solid #ddd;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  width: 50px;       /* ширина кнопки */
+  height: 50px;      /* висота кнопки */
+  cursor: pointer;
+  font-size: 28px;   /* розмір стрілки */
+  border-radius: 50%; /* робить її ідеально круглою */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
