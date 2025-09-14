@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </nav>
 
         <a href="#contact" class="btn btn--primary">
-          Consultation
+          Order a consultation
           <svg class="icon"><use href="#icon-arrow-right" /></svg>
         </a>
       </div>
@@ -164,15 +164,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <!-- Services12-->
     <section id="service" class="hero" aria-labelledby="hero-title">
       <div class="hero__bg"></div>
-      <div class="container section__block">
         <div class="section__service">
           <div class="hero__cta">
             </a>
           </div>
         </div>
-        <div class="hero__media">
-          <div class="hero__glow"></div>
-          <div class="media-card_bio">
+          <div class="media-card_services">
             <img
               src="./images/adaptive/Services1.png"
               class="media-card__img"
@@ -182,22 +179,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             You will receive a bonus for your Google Ads account of up to UAH 30,000.
           </p>
           </div>
-        </div>
-      </div>
     </section>
 
      <!-- Niches-->
    <section id="service" class="hero" aria-labelledby="hero-title">
       <div class="hero__bg"></div>
-      <div class="container section__block">
         <div class="section__service">
           <div class="hero__cta">
             </a>
           </div>
         </div>
-        <div class="hero__media">
-          <div class="hero__glow"></div>
-          <div class="media-card">
+          <div class="media-card_niches">
             <h1 id="hero-title" class="hero__title">
             Niches
           </h1>
@@ -207,8 +199,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               alt="Niches"
             />
           </div>
-        </div>
-      </div>
     </section>
 
 
@@ -272,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="contact__cols">
           <div class="form card card--solid">
-            <form id="lead-form" class="form__grid" novalidate>
+            <form id="lead-form" class="form__grid" action="https://formspree.io/f/movnnpnq" method="POST">
               <div class="form__field">
                 <label class="form__label">Name</label>
                 <input name="name" placeholder="Your Name" class="input" required />
@@ -296,6 +286,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <svg class="icon"><use href="#icon-arrow-right" /></svg>
               </button>
             </form>
+            <p id="status" style="margin-top:10px; font-weight:bold;"></p>
           </div>
 
           <aside class="card card--solid">
@@ -343,45 +334,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer__copy">
           © <span id="year"></span> Effective online advertising. All rights reserved.
         </div>
-         <div class="footer__copy">
+         <div class="footer__copy_privacy">
           <a target="blank" href="./privacy.html">Privacy Policy</a>
         </div>
         <button class="lang-button" onclick="window.location.href='index.html'">UA</button>
       </div>
     </footer>
-
-    <!-- Minimal JS: плавний скрол (через CSS), логіка форми та рік у футері -->
-    <script>
-      /** Просте керування станом відправки форми */
-      (function () {
-        const form = document.getElementById('lead-form');
-        const submit = document.getElementById('lead-submit');
-        const year = document.getElementById('year');
-
-        year.textContent = new Date().getFullYear();
-
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const fd = new FormData(form);
-          const name = String(fd.get('name') || '').trim();
-          const phone = String(fd.get('phone') || '').trim();
-
-          if (!name || !phone) {
-            alert("Please fill in your name and phone number.");
-            return;
-          }
-
-          submit.disabled = true;
-          submit.textContent = 'Sending...';
-
-          // Імітація запиту
-          setTimeout(function () {
-            submit.textContent = 'Sent ✓';
-          }, 900);
-        });
-      })();
-    </script>
-    <script src="lang.js"></script>
+    <script src="./scripts/form.js"></script>
     <script src="./scripts/slider.js"></script>
   </body>
 </html>

@@ -128,9 +128,9 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 10px 24px -6px #e28d48;
 }
 .btn--accent_contact {
-  background: #3e6ac9;
+  background: #204fb6;
   color: #0a0f1c;
-  box-shadow: 0 10px 24px -6px #4d6db3;
+  box-shadow: 0 10px 24px -6px #4769b1;
 }
 .btn--accent:hover { filter: brightness(1.05); }
 .btn--ghost {
@@ -320,6 +320,28 @@ img { max-width: 100%; display: block; }
   align-items: center;
   flex-direction: column;
 }
+.media-card_niches{
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px #f87000;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.media-card_services {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px #0051ff;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .media-card__img { object-fit: cover; }
 .hero__thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
 .messenger {
@@ -497,10 +519,12 @@ background: white;}
 .footer__brand { display: flex; gap: 10px; align-items: center; }
 .footer__note { color: var(--bg); font-size: 13px; }
 .footer__copy { color: var(--bg); font-size: 14px; padding: 25px;}
+.footer__copy_privacy { color: var(--bg); font-size: 14px; padding: 25px;}
 
 /* Responsive */
 @media (min-width: 640px) {
   .hero__title { font-size: 50px; }
+  .footer { font-size: 50px; }
 }
 @media (min-width: 768px) {
   .nav { display: flex; }
