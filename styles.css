@@ -583,15 +583,15 @@ background: white;}
 .gallery { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 
 /* Footer */
-.footer { background: #ffffff; border-top: 1px rgb(255, 0, 0); }
+.footer { background: linear-gradient(180deg, #ffffff 0%, #f0e1e1 50%, #ffffff 100%); }
 .footer__inner {
   display: flex;
   flex-direction: column;
   gap: 14px;
   align-items: center; /* центр по горизонталі на мобі */
+  justify-content: center;
   text-align: center;
   padding: 24px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f0e1e1 50%, #ffffff 100%);
 }
 .footer__innerlogo {
   height: 100px;
@@ -607,7 +607,7 @@ background: white;}
   .footer__inner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 14px;
   }
