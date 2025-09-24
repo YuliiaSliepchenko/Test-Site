@@ -90,16 +90,14 @@ img { max-width: 100%; display: block; }
 .brand__logo {
   width: 100px; height: 70px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent-2), var(--accent));
   max-width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 .brand__name {
   font-weight: 700;
   letter-spacing: .06em;
   color: #000000;
-  padding-left: 15px;
 }
 .nav {
   display: none;
@@ -117,13 +115,29 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 16px;
+  padding: 10px 15px;
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
   transition: all .2s ease;
   white-space: nowrap;
+}
+@media (min-width: 481px) {
+  .footer__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+  }
+}
+
+/* Мобільна версія: кнопка під політикою */
+@media (max-width: 480px) {
+  .btn {
+    gap: 1px;
+  }
 }
 .btn--primary {
   background: #f87000;
@@ -133,12 +147,11 @@ img { max-width: 100%; display: block; }
 .btn--accent {
   background: #f87000;
   color: #0a0f1c;
-  box-shadow: 0 10px 24px -6px #e28d48;
 }
 .btn--accent_contact {
-  background: #204fb6;
+  background: #3b69cc;
   color: #000000;
-  box-shadow: 0 10px 24px -6px #4769b1;
+  padding: 10px;
 }
 .btn--accent:hover { filter: brightness(1.05); }
 .btn--ghost {
@@ -197,17 +210,17 @@ img { max-width: 100%; display: block; }
 }
 .hero__bgbio {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, #3365d1 0%, #6482c2 50%, #3365d1 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0e1e1 50%, #ffffff 100%);
   z-index: -1;
 }
 .hero__bgniches {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, #f87000 0%, #e78e09 50%, #f87000 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0e1e1 50%, #ffffff 100%);
   z-index: -1;
 }
 .hero__bgcontacts {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, #3365d1 0%, #6482c2 50%, #3365d1 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0e1e1 50%, #ffffff 100%);
   z-index: -1;
 }
 .hero__bghero {
@@ -279,7 +292,7 @@ img { max-width: 100%; display: block; }
 
   justify-content: flex-start;
 }
-.hero__subtitle { color: var(--bg); margin-top: 12px; display: flex; justify-content: center; align-items: center;}
+.hero__subtitle { color: var(--bg); display: flex; justify-content: center; align-items: center; padding: 10px;}
 .hero__cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; padding-left: 10px;}
 .hero__partners { display: flex; gap: 16px; align-items: center; margin-top: 20px; flex-wrap: wrap; }
 .chip {
@@ -352,7 +365,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 30px 60px -20px #f87000;
+  box-shadow: 0 30px 60px -20px #bfbab6;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -361,10 +374,9 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
 }
 .media-card_bio{
-  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 30px 60px -20px #0051ff;
+  box-shadow: 0 30px 60px -20px #bfbab6;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -423,7 +435,7 @@ background: white;}
   border-block: 1px solid var(--border);
 }
 .section--mutedcontacts {
-  background: linear-gradient(180deg, #f87000 0%, #e78e09 50%, #f87000 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0e1e1 50%, #ffffff 100%);
   border-block: 1px solid var(--border);
 }
 .section__head { margin-bottom: 18px; display: flex; flex-direction: column; align-items: center;}
@@ -613,7 +625,7 @@ background: white;}
 .footer__brand { display: flex; gap: 10px; align-items: center; order: 1;}
 .footer__note { color: var(--bg); font-size: 13px; }
 .footer__copy { color: var(--bg); font-size: 14px; order: 4;}
-.footer__copy_privacy { color: var(--bg); font-size: 14px; padding: 25px; order: 3;}
+.footer__copy_privacy { color: var(--bg); font-size: 14px; padding-right: 10px; order: 3;}
 
 /* Responsive */
 @media (min-width: 640px) {
