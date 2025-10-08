@@ -393,23 +393,38 @@ img {
   color: #070b14;
   justify-content: flex-start;
 }
+
 @media (max-width: 481px) {
   .subbadge__title {
     text-align: -webkit-center;
   }
 }
 .subbadge__titlehero {
-  margin: 12px;
-  font-size: 20px;
+  position: relative;
+  display: inline-block;
   color: #070b14;
-  transition: color 0.4s ease, transform 0.4s ease;
+  transition: color 0.3s ease;
 }
 
-/* Ефект при наведенні */
-.subbadge__titlehero:hover {
-  color: #000000; /* наприклад, колір кнопки */
-  transform: translateY(-3px);
+.subbadge__titlehero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.4s ease;
 }
+
+.subbadge__titlehero:hover {
+  color: #000000;
+}
+
+.subbadge__titlehero:hover::after {
+  width: 100%;
+}
+
 
 .hero__subtitle {
   color: var(--bg);
