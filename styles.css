@@ -247,7 +247,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .hero__grid {
     display: flex;
     flex-direction: column;
@@ -379,10 +379,10 @@ img {
   display: flex;
   justify-content: flex-start;
 }
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .badge__title {
     font-size: 40px;
-    padding-right: 15px;
+    padding-right: 18px;
   }
 }
 .subbadge__title {
@@ -391,7 +391,7 @@ img {
   color: #070b14;
   justify-content: flex-start;
 }
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .subbadge__title {
     text-align: -webkit-center;
   }
@@ -417,6 +417,7 @@ img {
   align-items: center;
   padding: 10px;
   padding-left: 1px;
+  margin-left: 5px;
 }
 .hero__cta {
   display: flex;
@@ -769,7 +770,7 @@ img {
   align-content: center;
   gap: 20px;
   text-align: -webkit-center;
-  margin-right: 35px;
+  margin-right: 40px;
 }
 
 .link--muted {
@@ -1013,7 +1014,7 @@ img {
 
 /* Для ширших екранів */
 /* Десктоп/планшет — як є (можеш лишити свої правила) */
-@media (min-width: 481px) {
+@media (min-width: 480px) {
   .footer__inner {
     display: flex;
     flex-direction: row;
@@ -1024,7 +1025,7 @@ img {
 }
 
 /* Мобільна версія: кнопка під політикою */
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .footer__inner {
     display: flex;
     flex-direction: column; /* все в колонку */
@@ -1046,7 +1047,7 @@ img {
   align-items: center;
   order: 1;
 }
-@media (max-width: 480px) {
+@media (max-width: 481px) {
   .footer__brand {
     flex-direction: column;
   }
