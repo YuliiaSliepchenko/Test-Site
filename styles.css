@@ -402,8 +402,15 @@ img {
   margin: 12px;
   font-size: 20px;
   color: #070b14;
-  justify-content: flex-start;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
+
+/* Ефект при наведенні */
+.subbadge__titlehero:hover {
+  color: #000000; /* наприклад, колір кнопки */
+  transform: translateY(-3px);
+}
+
 .hero__subtitle {
   color: var(--bg);
   display: flex;
