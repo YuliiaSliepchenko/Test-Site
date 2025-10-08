@@ -565,6 +565,35 @@ img {
   align-items: center;
   flex-direction: column;
 }
+/* === Hover Zoom для біографії === */
+.media-card_bio {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 30px 60px -20px #bfbab6;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.media-card_bio img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+/* ефект при наведенні */
+.media-card_bio:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+}
+
+/* легкий відкат при кліку */
+.media-card_bio:active img {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
 .media-card_niches {
   border: 1px solid var(--border);
   overflow: hidden;
@@ -764,7 +793,25 @@ img {
   margin: 5px;
   width: 100px;
 }
+.icon_item {
+  margin: 5px;
+  width: 100px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
 
+/* Плавний масштаб */
+.icon_item:hover {
+  transform: scale(1.1);
+  filter: brightness(1.15);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Ефект натискання */
+.icon_item:active {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
 .list {
   text-decoration: none;
   display: flex;
