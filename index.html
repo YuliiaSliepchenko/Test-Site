@@ -309,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="contact__cols">
           <div class="form card card--solid">
             <h2 id="card__title" class="section__titles">Форма реєстрації</h2>
-            <form id="lead-form" class="form__grid" action="https://formspree.io/f/xzzaolge" method="POST">
+            <form id="contactForm" class="form__grid" action="https://formspree.io/f/xzzaolge" method="POST">
               <div class="form__field">
                 <label class="form__label">Ім'я</label>
                 <input name="name" placeholder="Ваше ім'я" class="input" required />
@@ -333,7 +333,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <svg class="icon"><use href="#icon-arrow-right" /></svg>
               </button>
             </form>
-            <p id="status" style="margin-top:10px; font-weight:bold;"></p>
+            <div class="success-popup" id="successPopup">
+  <div class="success-popup__content">
+    <span class="success-popup__icon">✅</span>
+    <p>Повідомлення успішно відправлено!</p>
+  </div>
+</div>
           </div>
 
           <aside class="card card--solid">
@@ -386,8 +391,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="lang-button" onclick="window.location.href='english.html'">EN</button>
       </div>
     </footer>
-    <script src="./scripts/form.js"></script>
-    <script src="./scripts/slider.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/slider.js"></script>
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="">
 </div>
