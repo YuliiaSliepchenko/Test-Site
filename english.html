@@ -53,6 +53,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <symbol id="icon-chevron" viewBox="0 0 24 24">
         <path fill="currentColor" d="M9.29 6.71a1 1 0 011.42 0L16 12l-5.29 5.29a1 1 0 11-1.42-1.42L13.17 12 9.29 8.12a1 1 0 010-1.41Z"></path>
       </symbol>
+  <symbol id="icon-telegram" viewBox="0 0 24 24">
+    <path d="M9.5 16.7L8.8 20.2c.4 0 .6-.1.8-.4l2-1.9 4.2 3.1c.8.4 1.3.2 1.5-.7l2.7-12.6c.2-.9-.3-1.3-1.1-1L3.4 9.6c-.9.3-.9.8-.2 1l4.5 1.4L17 7.2c.3-.2.6 0 .3.2L9.5 16.7z"/>
+  </symbol>
+
+  <symbol id="icon-facebook" viewBox="0 0 24 24">
+    <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.89 3.57 8.94 8.24 9.81v-6.94H7.9v-2.87h2.2V9.84c0-2.18 1.29-3.39 3.27-3.39.95 0 1.94.17 1.94.17v2.14h-1.1c-1.09 0-1.43.68-1.43 1.37v1.64h2.44l-.39 2.87h-2.05v6.94c4.67-.87 8.24-4.92 8.24-9.81z"/>
+  </symbol>
+
+  <symbol id="icon-instagram" viewBox="0 0 24 24">
+    <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.3A4.7 4.7 0 0 0 7.3 12 4.7 4.7 0 0 0 12 16.7 4.7 4.7 0 0 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.4A2.7 2.7 0 0 1 9.3 12 2.7 2.7 0 0 1 12 9.3 2.7 2.7 0 0 1 14.7 12 2.7 2.7 0 0 1 12 14.7zm5.3-8.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/>
+  </symbol>
     </svg>
 
     <!-- Header -->
@@ -345,22 +356,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <aside class="card card--solid">
             <h3 class="card__title">Contacts</h3>
-            <p class="card__text">We work offline/online. Meetings are by appointment.</p>
+            <p class="card__text">We work offline/online.<br>Meetings are by appointment.</p>
 
-            <div class="contacts">
-              <a class="contact" target="blank" href="https://t.me/EffAds">
-                 <svg class="icon icon--ok"><use href="#icon-mail" /></svg>
-                 Telegram:@EffAds
-              </a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=effadsonline@gmail.com" target="_blank" class="contact">
-                <svg class="icon icon--ok"><use href="#icon-mail" /></svg>
-                effadsonline@gmail.com
-              </a>
-              <a href="tel:+380954164655" class="contact__number">
-                <svg class="icon icon--ok"><use href="#icon-phone" /></svg>
-                +380 95 416 46 55 
-              </a>
-            </div>
+            <div class="social-icons">
+    <a href="https://t.me/EffAds" target="_blank" class="social-icon" aria-label="Telegram">
+      <svg class="icon icon--gallery"><use href="#icon-telegram" /></svg>
+    </a>
+
+    <a href="mailto:effadsonline@gmail.com" target="_blank" class="social-icon" aria-label="Gmail">
+      <svg class="icon icon--gallery"><use href="#icon-mail" /></svg>
+    </a>
+
+    <a href="tel:+380954164655" class="social-icon" aria-label="Phone">
+      <svg class="icon icon--gallery"><use href="#icon-phone" /></svg>
+    </a>
+
+    <a href="https://www.instagram.com/effads.online" target="_blank" class="social-icon" aria-label="Instagram">
+      <svg class="icon icon--gallery"><use href="#icon-instagram" /></svg>
+    </a>
+
+    <a href="https://www.facebook.com/effads.online" target="_blank" class="social-icon" aria-label="Facebook">
+      <svg class="icon icon--gallery"><use href="#icon-facebook" /></svg>
+    </a>
+  </div>
 
             <div class="gallery">
               <img src="https://pub-cdn.sider.ai/u/U0X7H8OYN76/web-coder/68a46a037b28bae4980a1dde/resource/21f14213-2683-4f97-9a96-88c1899db7c3.jpg" alt="Office" class="thumb" />
