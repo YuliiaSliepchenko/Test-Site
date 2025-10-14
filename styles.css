@@ -247,7 +247,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 481px) {
+@media (max-width: 767px) {
   .hero__grid {
     display: flex;
     flex-direction: column;
@@ -1230,7 +1230,7 @@ form.form--sent { outline: 0; }
 }
 
 /* Мобільна версія: кнопка під політикою */
-@media (max-width: 481px) {
+@media (max-width: 767px) {
   .footer__inner {
     display: flex;
     flex-direction: column; /* все в колонку */
@@ -1252,7 +1252,7 @@ form.form--sent { outline: 0; }
   align-items: center;
   order: 1;
 }
-@media (max-width: 481px) {
+@media (max-width: 767px) {
   .footer__brand {
     flex-direction: column;
   }
