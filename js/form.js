@@ -1,94 +1,56 @@
 (function () {
-  const form   = document.getElementById("contactForm");
-  const status = document.getElementById("status");
-  const popup  = document.getElementById("successPopup");
+  const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';  // ← встав сюди свій GA4 ID
+  const THANKS_URL        = '/thank-you.html';
+  const REDIRECT_DELAY_MS = 800;
 
-  // ==== НАЛАШТУВАННЯ ====
-  const THANKS_URL = "/thank-you.html";   // <-- ВАША сторінка подяки (замість Formspree)
-  const REDIRECT_DELAY_MS = 1200;         // затримка перед редіректом (анімація встигає з’явитись)
-
+  const form   = document.getElementById('contactForm');
+  const status = document.getElementById('status');
+  const popup  = document.getElementById('successPopup');
   if (!form) return;
 
-  let t1 = null, t2 = null;
-
-  const showPopup = () => {
+  const showPopup = (msg = '✅ Повідомлення відправлено!') => {
     if (!popup) return;
-    clearTimeout(t1); clearTimeout(t2);
-    popup.classList.remove("hide");
-    popup.classList.add("show");
-
-    // НЕ обов’язково ховати — все одно редіректимося
-    // Але якщо хочете — залиште автозакриття попапа:
-    // t1 = setTimeout(() => {
-    //   popup.classList.remove("show");
-    //   popup.classList.add("hide");
-    // }, 2500);
-    // t2 = setTimeout(() => {
-    //   popup.classList.remove("hide");
-    // }, 3500);
+    popup.textContent = msg;
+    popup.classList.remove('hide');
+    popup.classList.add('show');
   };
 
-  const hidePopup = () => {
-    if (!popup) return;
-    clearTimeout(t1); clearTimeout(t2);
-    popup.classList.remove("show");
-    popup.classList.add("hide");
-    setTimeout(() => popup.classList.remove("hide"), 800);
-  };
-
-  if (popup) {
-    popup.addEventListener("click", hidePopup);
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") hidePopup();
-    });
-  }
-
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (status) status.textContent = "";
 
     try {
-      const data = new FormData(form);
       const response = await fetch(form.action, {
         method: form.method,
-        body: data,
-        headers: { Accept: "application/json" }
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
       });
 
       if (response.ok) {
-        // 1️⃣ показуємо анімацію
+        form.reset();
+        form.classList.add('form--sent');
         showPopup();
+        if (status) { status.style.color = 'green'; status.textContent = '✅ Успішно відправлено!'; }
 
-        // 2️⃣ фолбек-підпис під формою (за бажанням)
-        if (status) {
-          status.style.color = "green";
-          status.textContent = "✅ Повідомлення успішно відправлено!";
+        // 🔥 Відправляємо подію в GA4
+        if (typeof gtag === 'function') {
+          gtag('event', 'form_submit', {
+            send_to: GA_MEASUREMENT_ID,
+            form_id: form.id || '(no-id)',
+            form_name: form.getAttribute('name') || 'Contact Form',
+            page_location: window.location.href,
+            page_title: document.title
+          });
         }
 
-        // 3️⃣ клас для аналітики
-        form.classList.add("form--sent");
-
-        // 4️⃣ чистимо форму
-        form.reset();
-
-        // 5️⃣ РЕДІРЕКТ НА ВАШУ THANK YOU СТОРІНКУ
-        setTimeout(() => {
-          window.location.href = THANKS_URL;
-        }, REDIRECT_DELAY_MS);
+        // Редірект на сторінку подяки
+        setTimeout(() => window.location.href = THANKS_URL, REDIRECT_DELAY_MS);
 
       } else {
-        if (status) {
-          status.style.color = "red";
-          status.textContent = "❌ Помилка при відправці. Спробуйте ще раз.";
-        }
+        if (status) { status.style.color = 'red'; status.textContent = '❌ Помилка при відправці.'; }
       }
-    } catch (err) {
-      if (status) {
-        status.style.color = "red";
-        status.textContent = "❌ Сталася помилка мережі. Спробуйте ще раз.";
-      }
+    } catch (error) {
+      console.error(error);
+      if (status) { status.style.color = 'red'; status.textContent = '⚠️ Помилка мережі.'; }
     }
   });
-
-  form.addEventListener("input", () => form.classList.remove("form--sent"));
 })();
